@@ -1,13 +1,13 @@
 ---
-title: "Syntax highlighting with mdsvex"
-date: "2023-01-05"
-updated: "2023-01-05"
+title: 'Syntax highlighting with mdsvex'
+date: '2023-01-05'
+updated: '2023-01-05'
 categories:
-  - "sveltekit"
-  - "web"
-  - "css"
-  - "markdown"
-coverImage: "/images/linus-nylund-Q5QspluNZmM-unsplash.jpg"
+  - 'sveltekit'
+  - 'web'
+  - 'css'
+  - 'markdown'
+coverImage: '/static/images/anh3.jpg'
 coverWidth: 16
 coverHeight: 9
 excerpt: This post shows you how syntax highlighting works here.
@@ -15,11 +15,11 @@ excerpt: This post shows you how syntax highlighting works here.
 
 mdsvex has automatic, built-in syntax highlighting with [Prism.js](https://prismjs.com/); just include the language name after the triple backticks, like so:
 
-```
+````
 \```css
 /* Your CSS here */
 \```
-```
+````
 
 And that will render just like so:
 
@@ -33,17 +33,18 @@ And that will render just like so:
 
 Here's how you'd do JavaScript:
 
-```
+````
 \```js
 // You can use js or javascript for the language
 \```
-```
+````
 
 Highlighted code sample:
+
 ```js
 const invertNumberInRange = (num, range) => {
 	return range - num;
-}
+};
 
 invertNumberInRange(25, 100); // 75
 ```
