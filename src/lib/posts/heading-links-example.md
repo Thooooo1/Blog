@@ -1,7 +1,10 @@
 ---
 title: 'Tổng quan về hệ thống phân tán'
 date: '2025-04-29'
-coverImage: '/static/images/anh3.jpg'
+categories:
+  - 'sveltekit'
+  - 'markdown'
+coverImage: '/images/anh3.jpg'
 coverWidth: 16
 coverHeight: 9
 ---
