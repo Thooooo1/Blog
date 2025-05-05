@@ -4,7 +4,7 @@ date: '2025-04-29'
 categories:
   - 'sveltekit'
   - 'markdown'
-coverImage: '/static/images/ảnh máy.jpg'
+coverImage: '/images/ảnh máy.jpg'
 coverWidth: 16
 coverHeight: 9
 ---
