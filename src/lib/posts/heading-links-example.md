@@ -4,24 +4,49 @@ date: '2025-04-29'
 categories:
   - 'sveltekit'
   - 'markdown'
-coverImage: '/images/anh3.jpg'
+coverImage: '/static/images/ảnh máy.jpg'
 coverWidth: 16
 coverHeight: 9
 ---
 
-## 1. Hệ thống phân tán là gì?
+## 1. Giới thiệu về Lenovo Yoga Slim 7i Pro
 
-Hệ thống phân tán (Distributed System) là tập hợp nhiều máy tính độc lập, được kết nối qua mạng và phối hợp để cùng thực hiện một nhiệm vụ. Mục tiêu là tạo ra một môi trường hoạt động như một hệ thống duy nhất đối với người dùng cuối.
+Lenovo Yoga Slim 7i Pro là một dòng laptop cao cấp thuộc phân khúc siêu mỏng nhẹ (ultrabook), được thiết kế dành cho người dùng chuyên nghiệp, sáng tạo nội dung và học tập – những người cần một thiết bị vừa mạnh mẽ, vừa di động.
+Hiệu năng máy tính:
+
+CPU: Tên chip (ví dụ: Intel Core i7-1165G7, i5-1240P…)
+
+GPU: Thường là Intel Iris Xe, hoặc có thể là NVIDIA GeForce MX450 nếu bản cao cấp
+
+RAM: Tổng dung lượng RAM (8GB, 16GB…), tốc độ (MHz)
 
 ---
 
-## 2. Các ứng dụng của hệ thống phân tán
+## 2. Liệt kê ít nhất 12 bài toán trong CNTT dùng đa luồng / đa tiến trình
 
-- **Dịch vụ web và internet**: Google, Amazon, Facebook, Twitter.
-- **Điện toán đám mây**: AWS, Microsoft Azure, Google Cloud Platform.
-- **Thương mại điện tử**: Shopee, Lazada, Tiki sử dụng hệ thống phân tán để đảm bảo hiệu suất cao và khả năng mở rộng.
-- **Hệ thống tài chính**: Giao dịch chứng khoán, ngân hàng trực tuyến.
-- **Giải trí trực tuyến**: Netflix, YouTube.
+- Web Server xử lý nhiều yêu cầu đồng thời: mỗi yêu cầu từ người dùng được xử lý bằng một luồng hoặc tiến trình riêng biệt để tăng khả năng phục vụ đồng thời.
+
+- Tải nhiều tệp cùng lúc (multi-download): mỗi tệp được tải xuống bằng một luồng khác nhau để rút ngắn tổng thời gian chờ.
+
+- Trình duyệt web (như Chrome): sử dụng đa tiến trình, mỗi tab hoạt động như một tiến trình riêng biệt để tránh treo toàn bộ trình duyệt khi một tab gặp lỗi.
+
+- Trò chơi điện tử (Game engine): sử dụng đa luồng để tách riêng các phần như xử lý hình ảnh, âm thanh, mạng, và AI nhằm tăng hiệu năng.
+
+- Xử lý ảnh hoặc video (rendering, chuyển định dạng): chia nhỏ dữ liệu và xử lý song song bằng nhiều luồng để đẩy nhanh tốc độ xử lý.
+
+- Phân tích dữ liệu lớn (Big Data): sử dụng nhiều tiến trình hoặc hệ thống phân tán để xử lý dữ liệu trên nhiều lõi CPU hoặc nhiều máy tính.
+
+- Biên dịch chương trình lớn (compile project): mỗi tệp mã nguồn có thể được biên dịch bởi một tiến trình độc lập để rút ngắn thời gian build.
+
+- Phần mềm diệt virus quét toàn bộ hệ thống: chia từng ổ đĩa, thư mục, hoặc tệp thành các tác vụ riêng xử lý song song.
+
+- Phát nhạc hoặc xem video trực tuyến: sử dụng đa luồng để vừa tải dữ liệu, vừa giải mã và hiển thị đồng thời.
+
+- Ứng dụng mạng xã hội (xử lý feed, tin nhắn, upload ảnh): nhiều luồng thực hiện các chức năng khác nhau để đảm bảo tốc độ và độ phản hồi.
+
+- Máy ảo (Virtual Machine) hoặc giả lập hệ điều hành: mỗi hệ điều hành giả lập chạy như một tiến trình độc lập.
+
+- Huấn luyện mô hình AI, học sâu (Deep Learning): sử dụng cả đa luồng, đa tiến trình, và hệ thống phân tán để tận dụng tối đa tài nguyên tính toán.
 
 ---
 
