@@ -1,5 +1,5 @@
 ---
-title: 'Tổng quan về hệ thống phân tán'
+title: 'giói thiệu về máy tính'
 date: '2025-04-29'
 categories:
   - 'sveltekit'
@@ -50,53 +50,61 @@ RAM: Tổng dung lượng RAM (8GB, 16GB…), tốc độ (MHz)
 
 ---
 
-## 3. Các khái niệm chính của hệ thống phân tán
+## 3. Liệt kê các trường hợp nên dùng thread, process, hoặc cả hai
 
-### 3.1 Giải thích các thuật ngữ
+### 3.1 Khi nên dùng Thread:
 
-- **Scalability**: Khả năng mở rộng hệ thống để xử lý nhiều tải hơn.
-- **Fault Tolerance**: Khả năng tiếp tục hoạt động khi một phần hệ thống gặp lỗi.
-- **Availability**: Khả năng hệ thống sẵn sàng phục vụ bất kỳ lúc nào.
-- **Transparency**: Người dùng không thấy sự phức tạp bên trong (ví dụ: vị trí, lỗi, di chuyển...).
-- **Concurrency**: Cho phép nhiều tiến trình hoạt động đồng thời mà không xung đột.
-- **Parallelism**: Thực hiện nhiều tác vụ cùng lúc để tối ưu hiệu suất.
-- **Openness**: Hệ thống có thể tương thích và tích hợp với các thành phần khác.
-- **Vertical Scaling**: Nâng cấp phần cứng cho máy chủ (thêm CPU, RAM).
-- **Horizontal Scaling**: Thêm nhiều máy chủ mới vào hệ thống.
-- **Load Balancer**: Phân phối tải đều giữa các máy chủ trong hệ thống.
-- **Replication**: Sao chép dữ liệu sang nhiều nút để tăng độ tin cậy và hiệu suất.
+- Khi các tác vụ cần chia sẻ dữ liệu, dùng thread sẽ tiện hơn vì thread trong cùng một process có thể dùng chung bộ nhớ.
 
-### 3.2 Ví dụ minh họa
+- Các công việc I/O-bound như đọc ghi file, gửi nhận dữ liệu mạng, có thể sử dụng nhiều thread để tránh chặn toàn bộ chương trình.
 
-**Ví dụ: Amazon Web Services (AWS)**
+- Khi cần thực hiện các nhiệm vụ nhỏ, nhanh, nhẹ, chẳng hạn như xử lý sự kiện, cập nhật giao diện trong ứng dụng desktop.
 
-- **Scalability**: Cho phép thêm/giảm máy ảo tự động qua auto-scaling group.
-- **Fault Tolerance**: Nếu một vùng bị lỗi, vùng khác vẫn hoạt động.
-- **Load Balancer**: ELB phân phối lưu lượng truy cập giữa các máy chủ.
-- **Replication**: S3 và RDS sử dụng replication để đảm bảo an toàn dữ liệu.
-- **Horizontal Scaling**: Thêm nhiều EC2 instance để tăng tải.
-- **Transparency**: Người dùng không biết đang truy cập máy chủ nào.
+### 3.2 Khi nên dùng Process:
+
+- Khi cần xử lý độc lập, không phụ thuộc lẫn nhau, hoặc cần cách ly về bảo mật và bộ nhớ (sandbox).
+
+- Dùng khi có thể xảy ra lỗi nặng: nếu một process bị lỗi, các process khác không bị ảnh hưởng.
+
+- Khi các tác vụ rất nặng về CPU và có thể tận dụng đa lõi CPU, thì chia thành nhiều process có thể hiệu quả hơn.
+
+- Ví dụ: Trình duyệt web (như Chrome) sử dụng mỗi tab là một process riêng để tránh ảnh hưởng lẫn nhau.
 
 ---
 
-## 4. Kiến trúc của hệ thống phân tán
+### 3.2 Khi nên dùng Process:
 
-### 4.1 Các mô hình kiến trúc phổ biến
+- Khi nên dùng cả hai (thread + process):
+- Trong các hệ thống phức tạp, có thể dùng nhiều process, và mỗi process lại có nhiều thread để xử lý song song các phần việc nhỏ hơn.
 
-- **Client-Server**: Máy khách gửi yêu cầu, máy chủ xử lý.
-- **Peer-to-Peer (P2P)**: Các nút trong mạng bình đẳng, chia sẻ tài nguyên.
-- **Multi-tier Architecture (3-tier)**: Gồm frontend, logic trung gian và database.
-- **Microservices Architecture**: Hệ thống gồm nhiều dịch vụ nhỏ, độc lập.
-- **Service-Oriented Architecture (SOA)**: Các thành phần giao tiếp qua giao thức mạng chuẩn (thường là HTTP, SOAP).
-
-### 4.2 Ví dụ
-
-**Microservices Architecture trong Netflix:**
-
-- Mỗi chức năng (gợi ý, thanh toán, phát video) là một dịch vụ riêng.
-- Dễ triển khai độc lập và mở rộng theo nhu cầu.
-- Các dịch vụ giao tiếp qua REST hoặc gRPC.
+Ví dụ: Một IDE như Visual Studio Code có thể dùng nhiều process cho từng extension và trong mỗi process lại có nhiều thread để xử lý giao diện, ngôn ngữ, biên dịch.
 
 ---
 
-Bạn muốn mình chuyển nội dung này thành file `.md` để bạn tải về không?
+## 4. ChatGPT training tập dữ liệu lớn bằng Distributed System như thế nào
+
+### 4.1 Tóm tắt quá trình training ChatGPT:
+
+- Tập dữ liệu cực lớn (tính bằng TB – petabyte) từ nhiều nguồn: sách, web, bài báo, mã nguồn...
+
+- Mô hình GPT được huấn luyện bằng kỹ thuật "Transformer" trên nhiều GPU/TPU song song.
+
+- Sử dụng Distributed Training:
+
+- Data Parallelism: Chia tập dữ liệu lớn thành nhiều phần, mỗi máy xử lý 1 phần giống nhau của mô hình.
+
+- Model Parallelism: Chia nhỏ chính mô hình để chạy trên nhiều GPU, mỗi GPU xử lý một phần mô hình.
+
+- Áp dụng Gradient Accumulation và Mixed Precision để tiết kiệm bộ nhớ và tăng tốc.
+
+- Hạ tầng dùng: GPU NVIDIA A100 hoặc TPU v4, hệ thống kết nối tốc độ cao (NVLink, Infiniband...).
+
+### 4.2 Tài liệu tham khảo:
+
+- How ChatGPT works: OpenAI blog
+
+- Training GPT at Scale – Microsoft & OpenAI
+
+- Hugging Face on Distributed Training
+
+---
