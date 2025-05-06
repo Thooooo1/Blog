@@ -1,9 +1,9 @@
 ---
-title: 'giói thiệu về máy tính'
+title: 'Tiến trình và luồngluồng'
 date: '2025-04-29'
 categories:
-  - 'sveltekit'
-  - 'markdown'
+  - 'Nguyễn Anh ThơThơ'
+  - '2201041622010416'
 coverImage: '/images/ảnh máy.jpg'
 coverWidth: 16
 coverHeight: 9
@@ -15,11 +15,11 @@ coverHeight: 9
 - Hiệu năng máy tính:
   ![alt text](<../../../images/Ảnh chụp màn hình 2025-05-06 162814.png>)
 
-CPU: Tên chip (ví dụ: Intel Core i7-1165G7, i5-1240P…)
+CPU: Tên chip i5-1240PP
 
-GPU: Thường là Intel Iris Xe, hoặc có thể là NVIDIA GeForce MX450 nếu bản cao cấp
+GPU: Intel Iris Xe
 
-RAM: Tổng dung lượng RAM (8GB, 16GB…), tốc độ (MHz)
+RAM: Tổng dung lượng RAM (16GB…), tốc độ (MHz)
 
 ---
 
