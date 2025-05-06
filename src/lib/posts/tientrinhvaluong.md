@@ -14,8 +14,7 @@ coverHeight: 9
 - Lenovo Yoga Slim 7i Pro là một dòng laptop cao cấp thuộc phân khúc siêu mỏng nhẹ (ultrabook), được thiết kế dành cho người dùng chuyên nghiệp, sáng tạo nội dung và học tập – những người cần một thiết bị vừa mạnh mẽ, vừa di động.
 - Hiệu năng máy tính:
   ![alt text](<../../../images/Ảnh chụp màn hình 2025-05-06 162814.png>)
-
-CPU: Tên chip i5-1240PP
+  CPU: Tên chip i5-1240PP
 
 GPU: Intel Iris Xe
 
