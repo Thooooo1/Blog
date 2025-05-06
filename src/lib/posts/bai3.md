@@ -2,8 +2,8 @@
 title: 'Trao đổi thông tin'
 date: '2025-04-29'
 categories:
-  - 'sveltekit'
-  - 'markdown'
+  - 'Nguyễn Anh Thơ'
+  - '22010416'
 coverImage: '/images/trao đổi thông tin.jpg'
 coverWidth: 16
 coverHeight: 9
