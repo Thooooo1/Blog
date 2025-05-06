@@ -53,9 +53,9 @@ RAM: Tổng dung lượng RAM (8GB, 16GB…), tốc độ (MHz)
 
 ## 3. Liệt kê các trường hợp nên dùng thread, process, hoặc cả hai
 
-### 3.1 Khi nên dùng Thread:
+![alt text](<../../../images/câu 3.jpg>)
 
-![anh](/images/câu 3.jpg)
+### 3.1 Khi nên dùng Thread:
 
 - Khi các tác vụ cần chia sẻ dữ liệu, dùng thread sẽ tiện hơn vì thread trong cùng một process có thể dùng chung bộ nhớ.
 
