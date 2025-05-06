@@ -52,7 +52,7 @@ RAM: Tổng dung lượng RAM (16GB…), tốc độ (MHz)
 
 ## 3. Liệt kê các trường hợp nên dùng thread, process, hoặc cả hai
 
-![alt text](<../../../static/images/câu 3.jpg>)
+![alt text](<../../../images/câu 3.jpg>)
 
 ### 3.1 Khi nên dùng Thread:
 
