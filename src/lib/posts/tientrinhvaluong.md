@@ -13,6 +13,7 @@ coverHeight: 9
 
 - Lenovo Yoga Slim 7i Pro là một dòng laptop cao cấp thuộc phân khúc siêu mỏng nhẹ (ultrabook), được thiết kế dành cho người dùng chuyên nghiệp, sáng tạo nội dung và học tập – những người cần một thiết bị vừa mạnh mẽ, vừa di động.
 - Hiệu năng máy tính:
+  ![Hiệu năng ](/images/Ảnh chụp màn hình 2025-05-06 162814.png)
 
 CPU: Tên chip (ví dụ: Intel Core i7-1165G7, i5-1240P…)
 
@@ -53,6 +54,8 @@ RAM: Tổng dung lượng RAM (8GB, 16GB…), tốc độ (MHz)
 ## 3. Liệt kê các trường hợp nên dùng thread, process, hoặc cả hai
 
 ### 3.1 Khi nên dùng Thread:
+
+![Ảnh câu 3 ](/images/câu 3.jpg)
 
 - Khi các tác vụ cần chia sẻ dữ liệu, dùng thread sẽ tiện hơn vì thread trong cùng một process có thể dùng chung bộ nhớ.
 
