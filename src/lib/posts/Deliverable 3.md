@@ -67,20 +67,7 @@ Hệ thống đã được kiểm thử thành công với các tính năng chí
 
 ---
 
-## 3. Mã nguồn (Code Snippets)
-
-<!-- **API tạo đơn hàng (Node.js + Express + CouchDB)**
-![API Order Creation](image_api_order.png)
-
-**Xác thực JWT cho API (Node.js + Express)**
-![JWT Authentication](image_jwt_auth.png)
-
-**Giao diện React: Tạo đơn hàng (Web Client)**
-![Order Form UI](image_order_ui.png)
-
---- -->
-
-## 4. Danh sách tính năng đã hoàn thành
+## 3. Danh sách tính năng đã hoàn thành
 
 **Các tính năng chính đã hoàn thành:**
 
@@ -116,7 +103,7 @@ Hệ thống đã được kiểm thử thành công với các tính năng chí
 
 ---
 
-## 5. Kế hoạch tiếp theo
+## 4. Kế hoạch tiếp theo
 
 Để hoàn thiện hệ thống quản lý bán hàng và chuẩn bị cho triển khai thực tế, các bước tiếp theo bao gồm:
 
