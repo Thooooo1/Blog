@@ -3,7 +3,7 @@ title: 'Bài tập giữa kì số 1'
 date: '2025-04-29'
 categories:
   - 'Nguyễn Anh Thơ'
-  - '22010416'
+  - 'Lương Trung Hiếu'
 coverImage: '/images/Apache_CouchDB_logo.svg.png'
 coverWidth: 16
 coverHeight: 9
@@ -15,13 +15,13 @@ coverHeight: 9
 
 ### Mục đích
 
-CouchDB là một hệ cơ sở dữ liệu NoSQL mã nguồn mở, được thiết kế để lưu trữ dữ liệu dạng tài liệu (JSON) với khả năng đồng bộ hóa mạnh mẽ giữa nhiều thiết bị. Nó phù hợp cho các ứng dụng offline-first – tức là hoạt động tốt ngay cả khi không có kết nối mạng, và tự động đồng bộ khi có mạng trở lại.
+CouchDB là một hệ cơ sở dữ liệu NoSQL mã nguồn mở, được thiết kế để lưu trữ dữ liệu dạng tài liệu (JSON) với khả năng đồng bộ hóa mạnh mẽ giữa nhiều thiết bị. Nó phù hợp cho các ứng dụng cần đồng bộ dữ liệu giữa nhiều điểm và xử lý dữ liệu phân tán.
 
 ### Vấn đề giải quyết được
 
 - Quản lý dữ liệu không có cấu trúc cố định.
 - Đồng bộ dữ liệu giữa nhiều thiết bị hoặc người dùng.
-- Làm việc hiệu quả trong môi trường thiếu ổn định về mạng.
+- Làm việc hiệu quả trong môi trường phân tán.
 - Xử lý xung đột dữ liệu khi có nhiều người dùng chỉnh sửa cùng lúc.
 
 ### Điểm mạnh
@@ -29,7 +29,7 @@ CouchDB là một hệ cơ sở dữ liệu NoSQL mã nguồn mở, được thi
 - Hỗ trợ đồng bộ dữ liệu giữa client và server thông qua replication.
 - API đơn giản dựa trên REST, dễ tích hợp với ứng dụng web và mobile.
 - Dữ liệu linh hoạt, không cần schema.
-- Hỗ trợ làm việc offline thông qua PouchDB (trên client).
+- Tích hợp tốt với PouchDB để lưu trữ cục bộ và đồng bộ hóa.
 
 ### Điểm yếu
 
@@ -39,7 +39,7 @@ CouchDB là một hệ cơ sở dữ liệu NoSQL mã nguồn mở, được thi
 
 ### So sánh với các hệ thống khác
 
-- So với **MongoDB**, CouchDB có lợi thế về đồng bộ dữ liệu offline giữa client và server.
+- So với **MongoDB**, CouchDB có lợi thế về cơ chế đồng bộ dữ liệu tự động giữa client và server.
 - So với **Firebase**, CouchDB cho phép kiểm soát chi tiết hơn về dữ liệu và replication nhưng không có tính năng real-time.
 - So với **PostgreSQL**, CouchDB không có truy vấn SQL nhưng linh hoạt hơn trong quản lý dữ liệu phi cấu trúc và khả năng mở rộng theo chiều ngang.
 
@@ -47,9 +47,9 @@ CouchDB là một hệ cơ sở dữ liệu NoSQL mã nguồn mở, được thi
 
 CouchDB phù hợp với các ứng dụng như:
 
-- Quản lý công việc offline.
-- Hệ thống bán hàng di động.
+- Hệ thống bán hàng phân tán.
 - Lưu trữ dữ liệu trên thiết bị IoT.
+- Hệ thống quản lý nhiều chi nhánh.
 - Y tế từ xa, giáo dục ở vùng sâu vùng xa.
 
 ---
@@ -58,22 +58,30 @@ CouchDB phù hợp với các ứng dụng như:
 
 ### Tên đề tài
 
-**Xây dựng hệ thống quản lý bán hàng offline sử dụng CouchDB**
+**Xây dựng hệ thống quản lý cửa hàng sử dụng CouchDB**
 
 ### Vấn đề cần giải quyết
 
-Trong các cửa hàng nhỏ hoặc các đơn vị kinh doanh lưu động (như bán hàng hội chợ, xe tải bán hàng), đôi khi không có kết nối mạng liên tục. Hệ thống bán hàng cần có khả năng:
+Hệ thống bán hàng cần đáp ứng các yêu cầu sau:
 
-- Lưu trữ đơn hàng, thông tin sản phẩm, khách hàng ngay cả khi offline.
-- Tự động đồng bộ dữ liệu lên server khi có kết nối mạng trở lại.
-- Hạn chế lỗi do mất kết nối hoặc nhập liệu lặp lại.
+- Lưu trữ đơn hàng, thông tin sản phẩm, khách hàng một cách linh hoạt.
+- Tự động đồng bộ dữ liệu lên server để tổng hợp và phân tích.
+- Hạn chế lỗi do nhập liệu lặp lại hoặc dữ liệu không nhất quán.
 - Hỗ trợ nhiều người dùng bán hàng tại các điểm khác nhau.
 
 ### Vai trò của CouchDB
 
-- Sử dụng PouchDB lưu dữ liệu cục bộ trên thiết bị (máy tính bảng, điện thoại).
-- Đồng bộ hóa với CouchDB server khi có kết nối mạng.
+- Lưu trữ dữ liệu theo cấu trúc JSON, dễ mở rộng.
+- Đồng bộ hóa dữ liệu giữa các thiết bị và server thông qua cơ chế replication.
 - Quản lý xung đột và hợp nhất dữ liệu một cách tự động.
 - Cung cấp REST API để tích hợp với các ứng dụng quản lý kho, kế toán.
 
-## kết luận
+---
+
+## 3. Kết luận
+
+CouchDB là một lựa chọn phù hợp cho các ứng dụng cần đồng bộ dữ liệu linh hoạt và hỗ trợ làm việc trong môi trường phân tán. Với khả năng tích hợp tốt cùng các công cụ như PouchDB, hệ thống có thể dễ dàng mở rộng theo chiều ngang, quản lý dữ liệu hiệu quả giữa nhiều thiết bị và người dùng.
+
+Đề tài "Xây dựng hệ thống quản lý cửa hàng sử dụng CouchDB" tận dụng hiệu quả các ưu điểm của CouchDB để giải quyết nhu cầu thực tiễn tại các điểm bán hàng nhỏ lẻ, giúp đảm bảo dữ liệu liên tục, an toàn và đồng bộ giữa nhiều thiết bị. Đây là một hướng đi tiềm năng trong phát triển hệ thống phân tán hiện đại, đặc biệt trong bối cảnh số hóa các hoạt động kinh doanh truyền thống.
+
+---
