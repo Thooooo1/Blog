@@ -69,16 +69,16 @@ Hệ thống đã được kiểm thử thành công với các tính năng chí
 
 ## 3. Mã nguồn (Code Snippets)
 
-**API tạo đơn hàng (Node.js + Express + CouchDB)**  
+<!-- **API tạo đơn hàng (Node.js + Express + CouchDB)**
 ![API Order Creation](image_api_order.png)
 
-**Xác thực JWT cho API (Node.js + Express)**  
+**Xác thực JWT cho API (Node.js + Express)**
 ![JWT Authentication](image_jwt_auth.png)
 
-**Giao diện React: Tạo đơn hàng (Web Client)**  
+**Giao diện React: Tạo đơn hàng (Web Client)**
 ![Order Form UI](image_order_ui.png)
 
----
+--- -->
 
 ## 4. Danh sách tính năng đã hoàn thành
 
