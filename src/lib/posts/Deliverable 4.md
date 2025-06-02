@@ -3,7 +3,7 @@ title: 'Deliverable 4'
 date: '2025-06-02'
 categories:
   - 'Nguyễn Anh Thơ'
-  - 'Lương Trung Hiếu"
+  - 'Lương Trung Hiếu'
 coverImage: '/images/Apache_CouchDB_logo.svg.png'
 coverWidth: 16
 coverHeight: 9
@@ -11,18 +11,9 @@ coverHeight: 9
 
 # Đánh giá hệ thống quản lý bán hàng
 
-_Published: 2025-06-02_  
-_Updated: 2025-06-01_
-
----
-
 Hệ thống quản lý bán hàng được xây dựng dựa trên nền tảng Node.js và Express, sử dụng CouchDB làm cơ sở dữ liệu, triển khai theo mô hình ứng dụng phân tán. Giao diện người dùng được thiết kế bằng HTML, CSS và Bootstrap, hỗ trợ các chức năng như xác thực người dùng, quản lý sản phẩm và đơn hàng.
 
-Dưới đây là báo cáo tổng hợp đánh giá hệ thống theo các tiêu chí của Deliverable 4 trong môn học “Ứng dụng Phân tán”.
-
----
-
-## 🧾 ĐÁNH GIÁ HỆ THỐNG QUẢN LÝ BÁN HÀNG
+## ĐÁNH GIÁ HỆ THỐNG QUẢN LÝ BÁN HÀNG
 
 - **Nền tảng:** Node.js, Express
 - **Cơ sở dữ liệu:** CouchDB
@@ -59,7 +50,7 @@ CouchDB hỗ trợ replication dữ liệu qua API `_replicator`. Mặc dù hệ
 
 ### 1.4. Simple Monitoring / Logging
 
-Ứng dụng dùng morgan để ghi log HTTP request. Express hỗ trợ ghi log lỗi và xử lý middleware. CouchDB cung cấp dashboard tại cổng 5984 hoặc sử dụng plugin quản lý như Fauxton.
+Ứng dụng dùng `morgan` để ghi log HTTP request. Express hỗ trợ ghi log lỗi và xử lý middleware. CouchDB cung cấp dashboard tại cổng 5984 hoặc sử dụng plugin quản lý như Fauxton.
 
 **Kết luận:** Đạt.
 
@@ -79,7 +70,7 @@ Trong hệ thống quản lý cửa hàng, ngoài các khái niệm phân tán c
 
 ### 2.1. Khôi phục hệ thống sau lỗi (System Recovery)
 
-System Recovery (Khôi phục hệ thống sau sự cố) là quá trình phục hồi hệ thống về trạng thái hoạt động bình thường sau khi một nút hoặc dịch vụ gặp sự cố. Trong một hệ thống phân tán, điều này có thể liên quan đến việc phục hồi dữ liệu bị mất hoặc khôi phục các máy chủ bị hỏng.
+**System Recovery** (Khôi phục hệ thống sau sự cố) là quá trình phục hồi hệ thống về trạng thái hoạt động bình thường sau khi một nút hoặc dịch vụ gặp sự cố. Trong một hệ thống phân tán, điều này có thể liên quan đến việc phục hồi dữ liệu bị mất hoặc khôi phục các máy chủ bị hỏng.
 
 **Cách thức thực hiện:**
 
@@ -94,7 +85,7 @@ Nếu một máy chủ xử lý đơn hàng gặp sự cố, hệ thống sẽ t
 
 ### 2.2. Cân bằng tải (Load Balancing)
 
-Load Balancing là quá trình phân phối đều các yêu cầu giữa các máy chủ nhằm tránh quá tải và duy trì hiệu suất ổn định.
+**Load Balancing** là quá trình phân phối đều các yêu cầu giữa các máy chủ nhằm tránh quá tải và duy trì hiệu suất ổn định.
 
 **Cách thức thực hiện:**
 
@@ -136,5 +127,3 @@ Người dùng đăng nhập nhận JWT để xác thực các yêu cầu API ti
 ## 3. Tổng kết
 
 Hệ thống quản lý cửa hàng đã được triển khai thành công với CouchDB làm cơ sở dữ liệu phân tán. Hệ thống có thể mở rộng linh hoạt, có khả năng chịu tải cao và đảm bảo tính nhất quán dữ liệu giữa các nút trong cluster. Việc sử dụng Node.js và Docker Compose giúp tự động hóa triển khai và quản lý các dịch vụ, đồng thời dễ dàng tích hợp với các dịch vụ khác trong hệ sinh thái.
-
----
